@@ -1,0 +1,227 @@
+/* cabeçalho.css - COMPLETO E CORRIGIDO (Nov 2025) */
+
+:root {
+ /* (Mantenha todas as suas variáveis aqui. Estou assumindo que font-size-principal existe.) */
+ --cor-primeira-background: #F4DCDC; /* Rosa Claro */
+ --cor-terceira-decoracao: #006600; /* Verde Principal */
+ --cor-quarta-decoracao: #FF0000; /* Vermelho Principal */
+ --cor-quinta-decoracao: #D3AF37; /* Dourado */
+ --cor-sexta-decoracao: #FFFFFF; /* Branco */
+ --cor-setima-decoracao: #000000; /* Preto */
+ --font-familia-roboto: 'Roboto', sans-serif;
+ /* Certifique-se de que a variável abaixo está definida no seu style.css ou root */
+ --font-size-principal: 1.1rem; /* Assumindo um valor para o seu menu */
+}
+
+/* ---------------------------------------------------- */
+/* 01. CABEÇALHO (HEADER) - Estilos Base e Flexbox */
+/* ---------------------------------------------------- */
+
+.container__menu.navbar-expand-lg.navbar {
+    align-items: center;
+    background-color: var(--cor-primeira-background) !important; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; 
+    padding: 0; 
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* Garante que o container interno ocupe 100% da largura da nav no desktop */
+.container__menu.navbar-expand-lg.navbar .container {  
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;  
+    width: 100%;
+    padding: 15px 50px; 
+}
+
+/* Container da Logo */
+.container__imagem {
+    align-items: center;
+    display: flex;
+}
+
+/* ---------------------------------------------------- */
+/* 02. LINKS E BOTÃO DE MODO NOTURNO (DESKTOP) */
+/* ---------------------------------------------------- */
+
+.container__menu-link,
+.form-check-label {
+    color: var(--cor-terceira-decoracao) !important;
+    font-family: var(--font-familia-roboto);
+    font-size: var(--font-size-principal);
+    font-weight: 400;
+    padding: 0;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.container__menu-link:hover,
+.form-check-label:hover {
+   color: var(--cor-quarta-decoracao) !important;
+}
+
+/* Lista UL - Flexbox Horizontal no Desktop (REGRAS CRUCIAIS PARA ALINHAMENTO HORIZONTAL) */
+.container__navbar-link {
+    display: flex !important;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto !important; 
+}
+
+.container__nav-item {
+    margin-left: 1.5rem; /* Espaçamento entre os links */
+}
+
+/* SWITCH DARK MODE (O ITEM DE LISTA) */
+.container__nav-item.dark-mode-switch-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+}
+
+/* Container DIV do Switch (Flexbox interno) */
+.form-check {
+    display: flex;
+    align-items: center;
+    padding-left: 0; 
+    margin: 0;
+    min-height: auto;
+}
+
+/* ÍCONES SOL/LUA - Cores e Ocultamento */
+
+.sun-icon {
+    margin-right: 45px; 
+    color: var(--cor-quinta-decoracao); 
+}
+
+/* CORREÇÃO: Aplicando margem ao INPUT do switch para separar dos ícones */
+.form-check-input {
+    margin-right: 0; /* Zera margem padrão do Bootstrap */
+    margin-left: 0; /* Zera margem padrão do Bootstrap */
+}
+
+
+.moon-icon {
+    margin-left: 5px; 
+    color: var(--cor-terceira-decoracao); 
+    opacity: 0.5; 
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Esconde o label de texto */
+.form-check-label {
+    display: none; 
+}
+
+/* ---------------------------------------------------- */
+/* 03. DARK MODE (Tema) - Ajustes nos Ícones */
+/* ---------------------------------------------------- */
+
+body[data-bs-theme="dark"] .sun-icon {
+    color: var(--cor-sexta-decoracao); 
+    opacity: 0.5;
+}
+
+body[data-bs-theme="dark"] .moon-icon {
+    color: var(--cor-sexta-decoracao); 
+    opacity: 1;
+}
+
+body[data-bs-theme="dark"] .container__menu-link:hover,
+body[data-bs-theme="dark"] .container__menu-link:focus {
+    color: var(--cor-quinta-decoracao) !important; 
+}
+
+/* ---------------------------------------------------- */
+/* 04. RESPONSIVIDADE (MOBILE / TABLET) - CORREÇÃO */
+/* ---------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .container__menu.navbar-expand-lg.navbar .container {
+        padding: 15px 20px;
+    }
+    
+    /* MUDANÇA PEDIDA: Offcanvas sem borda */
+    .offcanvas {
+        background-color: var(--cor-primeira-background) !important;
+        border-left: none; /* Remove a borda padrão do offcanvas */
+    }
+    
+    .navbar-toggler {
+        background-color: transparent !important; 
+        border: none !important; 
+        outline: none !important;
+        box-shadow: none !important; 
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin-left: auto;
+    }
+    
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler:focus-visible {
+        box-shadow: none !important; 
+        outline: none !important;
+    }
+
+    .menu-bar {
+        display: block;
+        width: 100%; 
+        height: 2px;
+        background-color: var(--cor-terceira-decoracao);
+        border-radius: 1px;
+    }
+
+
+    /* Offcanvas Header - Ícones e cor */
+    .offcanvas-header {
+        background-color: var(--cor-primeira-background);
+        border: none !important;
+    }
+    
+    /* Links no Mobile - Alinhamento (Garanti a quebra de linha correta no mobile) */
+    .container__navbar-link {
+        flex-direction: column !important; 
+        align-items: flex-start !important; 
+        display: flex !important; /* Mantém o display flex para controle */
+        padding-left: 0;
+    }
+    
+    .container__nav-item {
+        width: 100%;
+        margin-left: 0 !important;
+        margin: 8px 0;
+        padding: 5px 20px; /* Espaçamento interno */
+        }
+        
+        /* Ícone do Switch no Mobile */
+        .container__nav-item.dark-mode-switch-item {
+            margin-left: 0 !important;
+            padding-left: 20px !important;
+            border: none !important;
+        }
+        
+        /* Garante que o switch com os ícones fiquem alinhados */
+        .form-check {
+        justify-content: flex-start;
+        }
+
+        body[data-bs-theme="dark"] .container__menu-link:hover,
+        body[data-bs-theme="dark"] .container__menu-link:focus {
+        color: var(--cor-quinta-decoracao) !important; 
+        }
+}

@@ -1,0 +1,204 @@
+.section-tours {
+    background-color: var(--cor-primeira-background);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section-tours .section-title {
+    color: #454545;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-tours .section-description {
+    color: #454545;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+/* --- GRID DE TOURS --- */
+.tours-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.tour-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); 
+}
+
+.tour-image img {
+    border-radius: 50%;
+    border: 3px solid #f0f0f0; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    margin-bottom: 20px;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+    width: 80%;
+}
+
+.tour-image {
+    overflow: hidden;
+}
+
+.tour-title {
+    color: #454545;
+    font-size: 1.1rem;
+    font-weight: 400;
+    min-height: 60px;
+    padding: 0 5px;
+}
+
+.section-description {
+   font-size: 42px; 
+   font-weight: 400;
+   margin: 0;
+}
+
+.tour-price {
+    color: var(--cor-quarta-decoracao);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.tour-button {
+    background-color: #006600;
+    border-radius: 10px 0 10px 0;
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: 500;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.tour-button:hover {
+    background-color: #004d00;
+}
+
+/* --- BOTÃO PRINCIPAL CTA INFERIOR --- */
+.main-cta-button {
+    background-color: #FF0000;
+    border-radius: 10px 0 10px 0;
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    padding: 15px 40px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.main-cta-button:hover {
+    background-color: #CC0000;
+}
+
+body[data-bs-theme="dark"] .section-tours {
+    background-color: #000000;
+}
+
+body[data-bs-theme="dark"] .section-tours .section-title,
+body[data-bs-theme="dark"] .section-tours .section-description {
+    color: #FFFFFF; 
+}
+
+
+body[data-bs-theme="dark"] .main-cta-button {
+    background-color: #FF0000; 
+    color: #FFFFFF;
+}
+
+/* ---------------------------------------------------- */
+/* AJUSTES PARA TABLET (< 992px) - UMA COLUNA CENTRALIZADA */
+/* ---------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    
+    .tours-grid {
+        grid-template-columns: 1fr; 
+        gap: 25px; /* Espaçamento entre os cards */
+        max-width: 400px; 
+        margin: 0 auto 50px auto; 
+        padding: 0 15px;
+    }
+
+    .tour-image img {
+        height: 250px; 
+        width: 250px;
+    }
+
+    .tour-title {
+        font-size: 1.1rem; 
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .section-tours {
+        padding: 40px 15px;
+    }
+
+    .tours-grid {
+        grid-template-columns: 1fr;
+        max-width: 90%; 
+        margin: 0 auto 50px auto;
+    }
+    
+    .tour-card {
+        border-radius: 10px;
+        padding-top: 15px; 
+    }
+
+    .tour-image img {
+        height: 250px;
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .section-tours .section-title {
+        font-size: 2rem;
+    }
+
+    .tour-title {
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .tour-price {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .tour-card {
+        border-radius: 10px 0 10px 0;
+    }
+
+    .tours-grid {
+        max-width: 90%; 
+    }
+
+    .section-tours {
+        padding: 40px 15px;
+    }
+}

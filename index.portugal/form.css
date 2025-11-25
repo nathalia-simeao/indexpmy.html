@@ -1,0 +1,125 @@
+/* ---------------------------------------------------- */
+/* NOVA SEÇÃO: FORMULÁRIO CTA (CALL TO ACTION) */
+/* ---------------------------------------------------- */
+
+.section-cta-form {
+    /* Define o background com a imagem */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('/assets/img/fundo\ form.png') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    color: #FFFFFF;
+    border-radius: 10px 0 10px 0;
+}
+
+.container-form-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Espaço entre o texto e o formulário */
+}
+
+/* 2.1 Bloco de Texto */
+.cta-text-block {
+    flex: 1; /* Ocupa metade do espaço */
+    max-width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color:#F4DCDC;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #F0F0F0;
+}
+
+/* 2.2 Bloco do Formulário */
+.cta-form-block {
+    flex: 1; /* Ocupa a outra metade */
+    max-width: 50%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco levemente transparente */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0 10px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form-home input[type="text"],
+.contact-form-home input[type="email"],
+.contact-form-home textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #454545;
+}
+
+.contact-form-home textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.cta-submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-terceira-decoracao); /* Seu verde escuro */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-submit-btn:hover {
+    background-color: #004d00; /* Um verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+body[data-bs-theme="dark"] .cta-submit-btn {
+    background-color: var(--cor-primeira-background); 
+    color: var(--cor-terceira-decoracao);
+    border: none;
+}
+
+/* ---------------------------------------------------- */
+/* RESPONSIVIDADE DO FORMULÁRIO (Mobile/Tablet) */
+/* ---------------------------------------------------- */
+@media (max-width: 991.98px) {
+    .container-form-cta {
+        /* Empilha o texto e o formulário verticalmente */
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .cta-text-block,
+    .cta-form-block {
+        max-width: 100%; /* Ocupa toda a largura */
+        text-align: center;
+    }
+    
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-subtitle {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

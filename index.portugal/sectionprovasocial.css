@@ -1,0 +1,182 @@
+.section-testimonials-header {
+    text-align: center;
+    background-color: var(--cor-primeira-background); 
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.section-testimonials-header .section-title {
+    color: #454545;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* --- GRID DEPOIMENTOS (Com Margem Negativa para sobreposição) --- */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    margin-bottom: -100px; 
+    position: relative; 
+    z-index: 2;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: left;
+    min-height: 180px;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.reviewer-desc {
+    color: #666666;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+
+/* --- SEÇÃO INFERIOR: Parceiros (Fundo Verde) --- */
+
+.section-partners-footer {
+    text-align: center;
+    background-color: #006600; 
+    
+    /* Padding Top compensa a margem negativa dos depoimentos */
+    padding-top: 150px; 
+    padding-bottom: 50px; /* Padding bottom normal */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.partners-cta {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner-logo {
+    background-color: #FFFFFF;
+    border-radius: 10px 0 10px 0;
+    width: 250px; 
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo img {
+    max-width: 80%; 
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+body[data-bs-theme="dark"] .section-testimonials-header {
+    background-color: #000000; 
+}
+
+body[data-bs-theme="dark"] .section-testimonials-header .section-title {
+    color: #FFFFFF; /* Título Branco */
+}
+
+/* Cartões de Depoimento (Mantidos Brancos) */
+body[data-bs-theme="dark"] .testimonial-card {
+    background-color: #FFFFFF; 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
+}
+
+/* Fundo Inferior: Rosa Claro/Bege no Dark Mode */
+body[data-bs-theme="dark"] .section-partners-footer {
+    background-color: var(--cor-primeira-background); /* Rosa Claro/Bege */
+}
+
+body[data-bs-theme="dark"] .partners-cta {
+    color: #333333; /* Texto Escuro */
+}
+
+@media (max-width: 991.98px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* 1 coluna no tablet */
+        max-width: 450px; /* Limita a largura do grid */
+        margin-bottom: -80px; /* Reduz a margem negativa */
+        padding: 0 20px;
+    }
+    
+    .section-partners-footer {
+        padding-top: 130px; /* Compensa a margem negativa reduzida */
+    }
+
+    .partner-logo {
+        padding: 10px 20px;
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .testimonials-grid {
+        margin-bottom: -50px; /* Margem negativa menor em mobile */
+        max-width: 90%;
+    }
+    
+    .section-partners-footer {
+        padding-top: 100px; /* Compensa a margem negativa */
+    }
+    
+    .partners-grid {
+        gap: 20px;
+        flex-direction: column; /* Empilha os logos no mobile */
+        align-items: stretch;
+    }
+    .partner-logo {
+        max-width: 100%;
+        padding: 10px;
+    }
+}

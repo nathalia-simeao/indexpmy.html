@@ -1,0 +1,188 @@
+/* ---------------------------------------------------- */
+/* PÁGINA DEDICADA: NOSSOS GUIAS */
+/* ---------------------------------------------------- */
+
+.section-guias-page {
+    padding: 60px 20px;
+    padding-top: 300px;
+    background-color: var(--cor-primeira-background); /* Rosa/Bege */
+    text-align: center;
+}
+
+.section-guias-page .section-title,
+.section-guias-page .section-subtitle {
+    color: var(--cor-terceira-decoracao);
+    margin-bottom: 5px; 
+}
+
+.container-guia-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+.guide-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Card Completo (Vertical) */
+.guide-full-card {
+    background-color: #FFFFFF;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.guide-full-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Foto e Container de Imagem */
+.guide-image-container-page {
+    width: 100%;
+    height: auto;
+    /* Layout vertical para a foto e redes sociais */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 30px 0 0 0;
+}
+
+.guide-avatar-page {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.guide-text-content-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.guide-description {
+    flex-grow: 1;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Redes Sociais (abaixo da foto) */
+.guide-social-section {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.guide-social-title {
+    font-size: 0.95rem;
+    color: var(--cor-terceira-decoracao);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.social-links-guia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links-guia img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.social-links-guia img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Botão WhatsApp */
+.btn-whatsapp-guia {
+    display: block;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 10px 0 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0 !important;
+}
+
+.btn-whatsapp-guia:hover {
+    background-color: #1EBE57;
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------- */
+/* MODO NOTURNO: PÁGINA NOSSOS GUIAS */
+/* ---------------------------------------------------- */
+
+body[data-bs-theme="dark"] .section-guias-page {
+    background-color: #0000;
+}
+
+body[data-bs-theme="dark"] .section-title,
+body[data-bs-theme="dark"] .section-subtitle {
+    color: var(--cor-primeira-background);
+}
+
+body[data-bs-theme="dark"] .guide-full-card {
+    background-color: var(--cor-primeira-background);
+}
+
+
+/* ---------------------------------------------------- */
+/* RESPONSIVIDADE (Ajuste a grade para telas menores) */
+/* ---------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    .guide-list-grid {
+        grid-template-columns: repeat(1, 1fr); 
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section-guias-page {
+    padding-top: 80px;
+    }
+
+    .guide-full-card {
+        max-width: 600px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .guide-list-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .section-guias-page {
+    padding-top: 80px;
+    }
+}

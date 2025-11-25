@@ -1,0 +1,139 @@
+@import url(css/cabeçalho.css);
+@import url(css/banner1.css);
+@import url(css/section-verde.css);
+@import url(css/section-produtos.css);
+@import url(css/section-provasocial.css);
+@import url(css/section-guides.css);
+@import url(css/footer.css);
+
+:root {
+
+    --cor-primeira-background: #F4DCDC;
+    --cor-segunda-texto:#454545;
+    --cor-terceira-decoracao: #006600;
+    --cor-quarta-decoracao: #FF0000;
+    --cor-quinta-decoracao: #D3AF37;
+    --cor-sexta-decoracao: #FFFFFF;
+    --cor-setima-decoracao: #000000;
+
+    --alpha-hover-transparente: 0.2;
+
+    --font-familia-roboto: 'Roboto', sans-serif;
+    --font-familia-worksans: 'Work Sans', sans-serif;
+    --font-peso-regular: 400;
+    --font-peso-medium: 500;
+    --font-peso-bold: 700;
+
+    --font-size-xxxl: 4.5rem;
+    --font-size-xxl: 2.625rem;
+    --fonte-size-xl: 2.438rem;
+    --fonte-size-l: 1.938rem;
+    --fonte-size-xm: 1.563rem;
+    --fonte-size-m: 1.25rem;
+    --fonte-size-b: 1rem;
+    --fonte-size-s: 0.813rem;
+
+    --line-height: 120%;
+
+    --padding-xs: 0.25rem;
+    --padding-s: 0.5rem;
+    --padding-m: 1rem;
+    --padding-l: 1.5rem;
+    --padding-xl: 2rem;
+    --padding-xxl: 2.5rem;
+    --padding-3xl: 3.75rem;
+    --padding-4xl: 4rem;
+    --padding-5xl: 4.75rem;
+
+    --gap-xs: 0.25rem;
+    --gap-s: 0.5rem;
+    --gap-m: 1rem;
+    --gap-l: 1.5rem;
+    --gap-xl: 2rem;
+    --gap-xxl: 2.5rem;
+    --gap-xxxl: 6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-familia-roboto)
+    var(--font-peso-medium)
+}
+
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-l);
+}
+
+h5 {
+    font-size: var(--font-size-xm);
+}
+
+body {
+    font-family: var(--font-familia-worksans);
+    --cor-primeira-background: #F4DCDC;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-primeira-background);
+    overflow-x: hidden;
+}
+
+.form-check-input:focus,
+.form-check-input:active {
+    box-shadow: none !important; 
+    outline: 0 !important; 
+}
+
+.container {
+    width: 1200px;
+
+    @media (max-width: 768px) {
+        width: 648px;
+    }
+}
+
+body[data-bs-theme="dark"] {
+    background-color: #000000; 
+    color: #FFFFFF;
+}
+
+body[data-bs-theme="dark"] .container__menu.navbar-expand-lg.navbar {
+    background-color: var(--cor-terceira-decoracao) !important;
+    background-image: none !important; 
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2) !important; 
+}
+
+body[data-bs-theme="dark"] .container__menu-link,
+body[data-bs-theme="dark"] .container__menu-lista .form-check-label {
+    background-color: transparent !important;
+    color: var(--cor-sexta-decoracao) !important;
+}
+
+@media (max-width: 990px) { 
+    body[data-bs-theme="dark"] .navbar-collapse {
+        background-color: #000000;
+        padding-bottom: 10px;
+    }
+
+    body[data-bs-theme="dark"] .offcanvas,
+    body[data-bs-theme="dark"] .offcanvas-header,
+    body[data-bs-theme="dark"] .offcanvas-body {
+    color: #FFFFFF; 
+}
+}
+

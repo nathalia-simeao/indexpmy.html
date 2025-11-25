@@ -1,0 +1,123 @@
+.section-guides {
+    background-color: var(--cor-primeira-background); 
+    padding: 60px 0;
+    text-align: center;
+}
+
+.container-guia {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-guides .section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #454545;
+    margin-bottom: 40px;
+}
+
+.guide-card {
+    background-color: var(--cor-primeira-background); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: auto;
+}
+
+.guide-card:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.guide-image-container {
+    flex-shrink: 0;
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.guide-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-text-content {
+    flex-grow: 1;
+}
+
+.guide-name {
+    color: var(--cor-quinta-decoracao);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.guide-description {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.guides-swiper .swiper-pagination-bullet {
+    background: #AAAAAA; 
+    opacity: 1;
+}
+
+.guides-swiper .swiper-pagination-bullet-active {
+    background: #333333;
+}
+
+body[data-bs-theme="dark"] .section-guides {
+    background-color: #000000; 
+}
+
+body[data-bs-theme="dark"] .section-guides .section-title {
+    color: #FFFFFF;
+}
+
+body[data-bs-theme="dark"] .guide-card {
+    background-color: var(--cor-primeira-background);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+body[data-bs-theme="dark"] .guide-name {
+    color: var(--cor-quinta-decoracao);
+}
+
+body[data-bs-theme="dark"] .guide-description {
+    color: #777777; 
+}
+
+@media (max-width: 767.98px) {
+    .guide-card {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .guide-image-container {
+        width: 180px; 
+        height: 180px;
+        margin: 0 auto 20px auto;
+    }
+
+    .guide-text-content {
+        padding-top: 20px;
+    }
+    
+    .guide-name {
+        font-size: 1.5rem;
+    }
+    
+    .guide-description {
+        font-size: 0.95rem;
+    }
+}

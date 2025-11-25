@@ -1,0 +1,339 @@
+.main-footer {
+    background-color: #FFFFFF; 
+}
+
+.footer-top {
+    /* Contêiner principal com largura máxima */
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px; /* Limita a largura do conteúdo principal */
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-bottom: 1px solid #E0D0D0;
+}
+
+/* 1. LOGO */
+.footer-logo-container {
+    flex-shrink: 0;
+    margin-right: 50px;
+    margin-top: -20px; /* Ajuste para subir a logo */
+}
+
+.footer-logo {
+    width: 180px; 
+    height: auto;
+    display: block;
+}
+
+/* 2. GRID DE CONTEÚDO LATERAL */
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 30px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor-terceira-decoracao);
+    margin-bottom: 15px;
+}
+
+/* Textos Genéricos (Descrições) */
+.footer-column p {
+    font-size: 1rem;
+    color: #454545;
+    margin: 5px 0;
+}
+
+/* Texto de Contato (E-mail e Telefone) - Destaque em Verde */
+.footer-contact .contact-line {
+    align-items: center;
+    display: flex;
+    margin: 5px 0; 
+}
+
+.footer-contact .contact-icon {
+    flex-shrink: 0;
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;  
+}
+
+.footer-contact .contact-line p {
+    margin: 0; 
+}
+
+/* 3. LINKS SOCIAIS (Imagens 25x25) */
+.footer-social .social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.social-links a {
+    display: block;
+    height: 25px;
+    width: 25px; 
+    margin: 0; 
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.social-icon-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* 4. FORMAS DE PAGAMENTO */
+.payment-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 5px; 
+    align-items: center;
+    justify-items: center;
+}
+
+.payment-icons-grid img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px; /* Adiciona espaço para a sombra */
+    background-color: #FFFFFF;
+}
+
+.payment-icons-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 5. LINHA DE DIREITOS AUTORAIS (100% WIDE) */
+.footer-copyright-line {
+    /* Estas propriedades garantem a largura total */
+    text-align: center;
+    background-color: var(--cor-terceira-decoracao);
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+/* 6. LINHA INFERIOR (100% WIDE) */
+.footer-bottom-bar {
+    height: 10px;
+    background-color: var(--cor-primeira-background); 
+}
+
+.contact-line p a {
+    color: inherit;
+    text-decoration: none; 
+    transition: color 0.3s;
+}
+
+.contact-line p a:hover {
+    text-decoration: none; 
+    color: var(--cor-segunda-decoracao);
+}
+
+/* -------------------------------------- */
+/* 14. MODO NOTURNO (FOOTER) - CORES REVERSAS */
+/* -------------------------------------- */
+
+body[data-bs-theme="dark"] .contact-line p a {
+    color: inherit;
+}
+
+body[data-bs-theme="dark"] .contact-line p a:hover {
+    color: #FFC107; /* Amarelo/Dourado */
+}
+
+body[data-bs-theme="dark"] .main-footer {
+    background-color: var(--cor-terceira-decoracao); /* Fundo Verde Escuro */
+}
+
+body[data-bs-theme="dark"] .footer-top {
+    background-color: var(--cor-terceira-decoracao);
+    border-bottom: 1px solid #4D874D;
+}
+
+/* Títulos e Textos Brancos no Fundo Escuro */
+body[data-bs-theme="dark"] .footer-column h4,
+body[data-bs-theme="dark"] .footer-column p,
+body[data-bs-theme="dark"] .footer-contact p {
+    color: #FFFFFF !important; 
+}
+
+body[data-bs-theme="dark"] .email-line .contact-icon {
+    content: url(/assets/icons-pmy/Icon\ -\ Email\ -\ MN.png); 
+}
+
+body[data-bs-theme="dark"] .whatsapp-line .contact-icon {
+    content: url(/assets/icons-pmy/Icon\ -\ WhatsApp\ -\ MN.png);
+}
+/* Troca de imagens Sociais para Dourado/Amarelo */
+body[data-bs-theme="dark"] .social-link.facebook .social-icon-img {
+    content: url(/assets/icons-pmy/Icon\ -\ Facebook\ -\ MN.png);
+}
+body[data-bs-theme="dark"] .social-link.linkedin .social-icon-img {
+    content: url(/assets/icons-pmy/Icon\ -\ Linkedin\ -\ MN.png);
+}
+body[data-bs-theme="dark"] .social-link.youtube .social-icon-img {
+    content: url(/assets/icons-pmy/Icon\ -\ Youtube\ -\ MN.png);
+}
+body[data-bs-theme="dark"] .social-link.instagram .social-icon-img {
+    content: url(/assets/icons-pmy/Icon\ -\ Instagram\ -\ MN.png);
+}
+
+/* Sombra dos Ícones de Pagamento no Dark Mode */
+body[data-bs-theme="dark"] .payment-icons-grid img {
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); 
+}
+
+/* Linha Direitos Autorais (Fundo Rosa/Bege e Texto Verde) */
+body[data-bs-theme="dark"] .footer-copyright-line {
+    background-color: var(--cor-primeira-background); 
+    color: var(--cor-terceira-decoracao); 
+}
+
+/* Linha Inferior (Barra Preta) */
+body[data-bs-theme="dark"] .footer-bottom-bar {
+    background-color: #000000;
+}
+
+
+/* -------------------------------------- */
+/* 15. RESPONSIVIDADE (MOBILE / TABLET) */
+/* -------------------------------------- */
+
+@media (max-width: 991.98px) {
+    /* Rodapé - Layout Vertical no Mobile */
+    .footer-top {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .footer-logo-container {
+        margin: 0 0 20px 0;
+    }
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Centraliza Redes Sociais no Mobile */
+    .footer-social .social-links {
+        justify-content: center;
+    }
+    
+    /* Ajusta Grid de Pagamentos no Mobile */
+    .payment-icons-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        /* NOVO: Garante que todo o texto seja centralizado no mobile */
+        text-align: center; 
+    }
+    
+    /* Centraliza Contato e Pagamento no Mobile */
+    .footer-column h4 { 
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact .contact-line {
+        /* Para centralizar as linhas de contato */
+        display: block; 
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    .footer-social .social-links {
+        justify-content: center;
+    }
+
+    /* Mantém 4 colunas de pagamento no Mobile (como estava antes) */
+    .payment-icons-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        max-width: 150px; /* Limita a largura do grid de ícones no mobile */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Rodapé - Layout Vertical no Mobile */
+    .footer-top {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    .footer-logo-container {
+        margin: 0 0 20px 0;
+    }
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Centraliza Redes Sociais no Mobile */
+    .footer-social .social-links {
+        justify-content: center;
+    }
+    
+    /* Ajusta Grid de Pagamentos no Mobile */
+    .payment-icons-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        /* NOVO: Garante que todo o texto seja centralizado no mobile */
+        text-align: center; 
+    }
+    
+    /* Centraliza Contato e Pagamento no Mobile */
+    .footer-column h4 { 
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact .contact-line {
+        /* Para centralizar as linhas de contato */
+        display: block; 
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    
+    .footer-social .social-links {
+        justify-content: center;
+    }
+
+    /* Mantém 4 colunas de pagamento no Mobile (como estava antes) */
+    .payment-icons-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        max-width: 150px; /* Limita a largura do grid de ícones no mobile */
+        margin: 0 auto;
+    }
+}
+

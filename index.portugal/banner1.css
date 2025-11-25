@@ -1,0 +1,138 @@
+.portugal-banner-1 {
+    /* Seu CSS original */
+    align-items: center;
+    background: url('../assets/img/banner-lisboa.png') no-repeat center center/cover;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center; 
+    height: 100vh;
+    overflow: hidden;
+    position: relative; 
+    padding-top: 200px;
+    text-align: center;
+}
+
+.banner-1-overlay {
+    position: absolute;
+    top: calc(50% + (200px / 2));
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    width: 100%; 
+    height: auto; 
+    min-height: 300px; 
+    
+    /* Estilo Visual */
+    background-color: rgba(255, 255, 255, 0.35);
+    z-index: 1; 
+    border-radius: 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-1-content {
+    position: relative; 
+    z-index: 2;
+    max-width: 800px; 
+    padding: 60px 60px; 
+    text-align: center; 
+}
+
+.banner-1-title {
+    color: #FFFFFF; 
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap; 
+}
+
+.banner-1-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #006600; 
+    margin-bottom: 30px;
+}
+
+.banner-1-button {
+    display: inline-block;
+    background-color: #FF0000; 
+    color: #FFFFFF;
+    padding: 15px 40px;
+    border-radius: 10px 0 10px 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.banner-1-button:hover {
+    /* Seu CSS original */
+    background-color: #CC0000; 
+}
+
+/* -------------------------------------- */
+/* 4. RESPONSIVIDADE (Ajustes para Mobile) */
+/* -------------------------------------- */
+@media (max-width: 767.98px) {
+    .portugal-banner-1 {
+        height: 80vh; 
+    }
+    
+    .banner-1-overlay {
+        /* Garante que a altura seja mantida no mobile */
+        min-height: 200px; 
+    }
+    
+    .banner-1-content {
+        /* Padding reduzido para telas menores */
+        padding: 30px 20px; 
+        max-width: 90%; 
+    }
+    
+    .banner-1-title {
+        font-size: 2.5rem;
+        white-space: normal; 
+    }
+    .banner-1-subtitle {
+        font-size: 1.2rem;
+    }
+    .banner-1-button {
+        padding: 5px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-1-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+
+    .banner-1-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /* Subtítulo */
+    .banner-1-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+    
+    .section-value-prop {
+        padding: 40px 20px !important;
+    }
+    
+    .value-prop-text {
+        font-size: 1.3rem;
+        text-align: center !important; 
+    }
+}
