@@ -1,7 +1,7 @@
 .portugal-banner-1 {
     /* Seu CSS original */
     align-items: center;
-    background: url('../assets/img/banner-lisboa.png') no-repeat center center/cover;
+    background: url('assets/bannerlisboa.png') no-repeat center center/cover;
     background-attachment: fixed; 
     display: flex;
     justify-content: center; 
