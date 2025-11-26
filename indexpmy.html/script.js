@@ -10,52 +10,7 @@ if (inputCheck) {
 }
 
 // --- 1.5. TROCAR ÍCONES NO MODO NOTURNO ---
-function updateIconsForTheme(theme) {
-    const socialIcons = document.querySelectorAll('.social-icon-img');
-    const contactIcons = document.querySelectorAll('.contact-icon');
 
-    socialIcons.forEach(icon => {
-        let src = icon.getAttribute('src');
-        if (theme === 'dark') {
-            // Troca de MC (light) para MN (dark)
-            src = src.replace('-MC.png', '-MN.png');
-        } else {
-            // Troca de MN (dark) para MC (light)
-            src = src.replace('-MN.png', '-MC.png');
-        }
-        icon.setAttribute('src', src);
-    });
-
-    contactIcons.forEach(icon => {
-        let src = icon.getAttribute('src');
-        if (theme === 'dark') {
-            // Troca de MC (light) para MN (dark)
-            src = src.replace('-MC.png', '-MN.png');
-        } else {
-            // Troca de MN (dark) para MC (light)
-            src = src.replace('-MN.png', '-MC.png');
-        }
-        icon.setAttribute('src', src);
-    });
-}
-
-// --- 2. LÓGICA DE FORMATAÇÃO DE MOEDA ---
-
-/**
- * Função para formatar um número como moeda em um locale específico.
- * @param {number} amount - O valor numérico (base em EUR, neste caso).
- * @param {string} currencyCode - O código ISO da moeda (ex: 'EUR', 'USD').
- * @param {string} locale - O código do locale (ex: 'pt-PT', 'en-US').
- * @returns {string} O valor formatado como moeda.
- */
-function formatCurrency(amount, currencyCode, locale) {
-    const formatter = new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: currencyCode,
-        minimumFractionDigits: 2, 
-    });
-    return formatter.format(amount);
-}
 
 /**
  * Aplica a formatação de moeda aos elementos .tour-price.

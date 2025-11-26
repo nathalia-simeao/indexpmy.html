@@ -247,8 +247,21 @@
                         <img src="assets/iconyoutubemc.png" alt="YouTube" class="social-icon-img" data-icon-light="assets/iconyoutubemc.png" data-icon-dark="assets/iconyoutubemn.png">
                     </a>
                     <a href="#" target="_blank" class="social-link instagram">
-                        <img src="assets/iconinstagrammc.png" alt="Instagram" class="social-icon-img" data-icon-light="assets/iconinstagrammc.png" data-icon-dark="assets/iconinstagrammn.png">
+                    <img src="assets/iconinstagrammc.png" alt="Instagram" class="social-icon-img" data-icon-light="iconinstagrammc.png" data-icon-dark="iconinstagrammn.png">
                     </a>
+                </div>
+
+                <div class="contact-line tripadvisor-line">
+                    <div id="TA_rated911" class="TA_rated">
+                        <ul id="1uXeWJ" class="TA_links y9C9UM">
+                            <li id="j6Z8MzP" class="6iyHSsdn">
+                                <a target="_blank" href="https://www.tripadvisor.com.br/Attraction_Review-g189158-d33249702-Reviews-Portugal_Me_and_You-Lisbon_Lisbon_District_Central_Portugal.html">
+                                    <img src="https://www.tripadvisor.com.br/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=911&amp;locationId=33249702&amp;lang=pt&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
                 </div>
             </div>
 
@@ -256,33 +269,37 @@
                 <h4>Contato</h4>
     
                 <div class="contact-line email-line">
-                    <img src="assets/iconemailmc.png" alt="Email" class="contact-icon" data-icon-light="assets/iconemailmc.png" data-icon-dark="assets/iconemailmn.png">
-                    <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
+                <img src="assets/iconemailmc.png" alt="Email" class="contact-icon" 
+                data-icon-light="assets/iconemailmc.png" 
+                data-icon-dark="assets/iconemailmn.png">
+                <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
                 </div>
     
                 <div class="contact-line whatsapp-line">
-                    <img src="assets/iconwhatsappmc.png" alt="WhatsApp" class="contact-icon" data-icon-light="assets/iconwhatsappmc.png" data-icon-dark="assets/iconwhatsappmn.png">
-                    <p>
-                        <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
-                            WhatsApp
-                        </a>
-                    </p>
+                <img src="assets/iconwhatsappmc.png" alt="WhatsApp" class="contact-icon" 
+                data-icon-light="assets/iconwhatsappmc.png" 
+                data-icon-dark="assets/iconwhatsappmn.png">
+                <p>
+                <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+                </p>
                 </div>
             </div>
 
             <div class="footer-column footer-payments">
                 <h4>Formas de Pagamento</h4>
                 <div class="payment-icons-grid">
-                    <img src="assets/Logo - visa.svg" alt="Visa">
-                    <img src="assets/Logo - Mastercard.svg" alt="Mastercard">
-                    <img src="assets/Logo - American Express.svg" alt="American Express">
-                    <img src="assets/Logo - Paypal.svg" alt="PayPal">
-                    <img src="assets/Logo - Shop.svg" alt="Shop Pay">
-                    <img src="assets/Logo - MB Multibanco.svg" alt="Multibanco">
-                    <img src="assets/Logo - google pay.svg" alt="Google Pay">
-                    <img src="assets/Logo - Apple pay.svg" alt="Apple Pay">
-                    <img src="assets/Logo - Maestro.svg" alt="Maestro">
-                    <img src="assets/Logo - Unionpay.svg" alt="Unionpay">
+                    <img src="assets/lgvisa.svg" alt="Visa">
+                    <img src="assets/lgmastercard.svg" alt="Mastercard">
+                    <img src="assets/lgamericanexprexx.svg" alt="American Express">
+                    <img src="assets/lgpaypal.svg" alt="PayPal">
+                    <img src="assets/lgshop.svg" alt="Shop Pay">
+                    <img src="assets/lgmbmultibanco.svg" alt="Multibanco">
+                    <img src="assets/lggooglepay.svg" alt="Google Pay">
+                    <img src="assets/lgapplepay.svg" alt="Apple Pay">
+                    <img src="assets/lgmaestro.svg" alt="Maestro">
+                    <img src="assets/lgunionpay.svg" alt="Unionpay">
                 </div>
             </div>
         </div> 
@@ -301,5 +318,60 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper-init.js"></script>
+
+    <script>
+    // Função principal que atualiza a fonte (src) dos ícones
+    function updateIconSources(isDarkMode) {
+        // Seleciona todos os ícones sociais (.social-icon-img) E ícones de contato (.contact-icon)
+        const icons = document.querySelectorAll('.social-icon-img, .contact-icon'); 
+
+        icons.forEach(icon => {
+            const lightSrc = icon.getAttribute('data-icon-light');
+            const darkSrc = icon.getAttribute('data-icon-dark');
+            
+            if (lightSrc && darkSrc) {
+                // Se for Modo Noturno, usa o caminho do atributo data-icon-dark
+                if (isDarkMode) {
+                    icon.src = darkSrc;
+                } 
+                // Se for Modo Claro, usa o caminho do atributo data-icon-light
+                else {
+                    icon.src = lightSrc;
+                }
+            }
+        });
+    }
+
+    // Função que configura o observador para detectar a mudança de tema
+    function observeThemeChange() {
+        const body = document.querySelector('body');
+        
+        // Configuração do observador: monitorar mudanças no atributo 'data-bs-theme'
+        const observerConfig = { attributes: true, attributeFilter: ['data-bs-theme'] };
+
+        // Cria uma nova instância do MutationObserver
+        const observer = new MutationObserver(mutationsList => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
+                    // Obtém o tema atual (light ou dark) e troca os ícones
+                    const currentTheme = body.getAttribute('data-bs-theme');
+                    const isDarkMode = currentTheme === 'dark';
+                    updateIconSources(isDarkMode);
+                }
+            }
+        });
+
+        // Inicia o observador no elemento body
+        observer.observe(body, observerConfig);
+
+        // CHAVE: Executa a função imediatamente na primeira carga da página 
+        // para garantir que os ícones corretos sejam exibidos no tema inicial.
+        const initialTheme = body.getAttribute('data-bs-theme');
+        updateIconSources(initialTheme === 'dark');
+    }
+
+    // Inicia o processo de observação após o carregamento completo do DOM
+    document.addEventListener('DOMContentLoaded', observeThemeChange);
+</script>
 </body>
 </html>
