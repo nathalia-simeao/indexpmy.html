@@ -1,3 +1,14 @@
+/* ---------------------------------------------------- */
+/* 1. CORREÇÕES GLOBAIS E SEÇÃO DEPOIMENTOS (TESTIMONIALS) */
+/* ---------------------------------------------------- */
+
+body, html {
+    overflow-x: hidden; 
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
 .section-testimonials-header {
     text-align: center;
     background-color: var(--cor-primeira-background); 
@@ -12,8 +23,7 @@
     margin-bottom: 40px;
 }
 
-/* --- GRID DEPOIMENTOS (Com Margem Negativa para sobreposição) --- */
-
+/* --- GRID DEPOIMENTOS (Com Margem POSITIVA) --- */
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,7 +31,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
-    margin-bottom: -100px; 
+    margin-bottom: 50px; 
     position: relative; 
     z-index: 2;
 }
@@ -37,7 +47,7 @@
 
 .testimonial-card .quote {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #555555;
     margin-bottom: 20px;
     position: relative;
@@ -70,113 +80,133 @@
     font-size: 0.85rem;
 }
 
-
-/* --- SEÇÃO INFERIOR: Parceiros (Fundo Verde) --- */
+/* ---------------------------------------------------- */
+/* 2. SEÇÃO PARCEIROS/WIDGET (Fundo Gradiente Linear) */
+/* ---------------------------------------------------- */
 
 .section-partners-footer {
     text-align: center;
-    background-color: #006600; 
-    
-    /* Padding Top compensa a margem negativa dos depoimentos */
-    padding-top: 150px; 
-    padding-bottom: 50px; /* Padding bottom normal */
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 100vw; 
+    margin-left: calc(50% - 50vw); 
+    background: linear-gradient(
+        to bottom,
+        #F4DCDC 0%,
+        #F4DCDC 50%,
+        #006600 50%,
+        #006600 100%
+    );
+    padding: 60px 20px 30px 20px;
 }
 
 .partners-cta {
     font-size: 2.2rem;
     font-weight: 500;
-    color: #FFFFFF;
-    margin-bottom: 30px;
+    color: #454545;
+    margin: 0 auto 30px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .partners-grid {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    max-width: 1000px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
 }
 
-.partner-logo {
-    background-color: #FFFFFF;
-    border-radius: 10px 0 10px 0;
-    width: 250px; 
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ---------------------------------------------------- */
+/* AJUSTES NO WIDGET (para corrigir sombra lateral e zoom) */
+/* ---------------------------------------------------- */
+
+#TA_selfserveprop563, 
+#COSMIDSSP,
+.TA_selfserveprop {
+    width: 100% !important; 
+    max-width: 460px; 
+    margin: 0 auto !important; 
+    box-sizing: border-box;
 }
 
-.partner-logo img {
-    max-width: 80%; 
-    max-height: 60px;
-    width: auto;
-    height: auto;
+.tripadvisor-widget-display {
+    max-width: 460px; 
+    width: 100%; 
+    margin: 0 auto;
     display: block;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tripadvisor-widget-display:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10; 
+}
+
+/* ---------------------------------------------------- */
+/* 3. MODO NOTURNO (DARK MODE) - GRADIENTE TRANSPARENT PARA ROSA */
+/* ---------------------------------------------------- */
+
+body[data-bs-theme="dark"] .section-partners-footer {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        #F4DCDC 50%,
+        #F4DCDC 100%
+    );
+}
+
+body[data-bs-theme="dark"] .partners-cta {
+    color: #F4DCDC;
 }
 
 body[data-bs-theme="dark"] .section-testimonials-header {
     background-color: #000000; 
+    padding-bottom: 0;
 }
 
 body[data-bs-theme="dark"] .section-testimonials-header .section-title {
-    color: #FFFFFF; /* Título Branco */
+    color: #FFFFFF;
 }
 
-/* Cartões de Depoimento (Mantidos Brancos) */
 body[data-bs-theme="dark"] .testimonial-card {
-    background-color: #FFFFFF; 
+    background-color: #121212; 
+    color: #ffffff;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
 }
 
-/* Fundo Inferior: Rosa Claro/Bege no Dark Mode */
-body[data-bs-theme="dark"] .section-partners-footer {
-    background-color: var(--cor-primeira-background); /* Rosa Claro/Bege */
-}
+/* ---------------------------------------------------- */
+/* 4. RESPONSIVIDADE (MOBILE / TABLET) */
+/* ---------------------------------------------------- */
 
-body[data-bs-theme="dark"] .partners-cta {
-    color: #333333; /* Texto Escuro */
-}
-
-@media (max-width: 991.98px) {
+@media (max-width: 900px) {
     .testimonials-grid {
-        grid-template-columns: 1fr; /* 1 coluna no tablet */
-        max-width: 450px; /* Limita a largura do grid */
-        margin-bottom: -80px; /* Reduz a margem negativa */
+        grid-template-columns: repeat(2, 1fr);
         padding: 0 20px;
     }
-    
-    .section-partners-footer {
-        padding-top: 130px; /* Compensa a margem negativa reduzida */
-    }
 
-    .partner-logo {
-        padding: 10px 20px;
-        flex-basis: 40%;
+    .partners-cta {
+        font-size: 1.8rem;
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 600px) {
     .testimonials-grid {
-        margin-bottom: -50px; /* Margem negativa menor em mobile */
-        max-width: 90%;
-    }
-    
-    .section-partners-footer {
-        padding-top: 100px; /* Compensa a margem negativa */
-    }
-    
-    .partners-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
-        flex-direction: column; /* Empilha os logos no mobile */
-        align-items: stretch;
+        padding: 0 16px;
     }
-    .partner-logo {
-        max-width: 100%;
-        padding: 10px;
+
+    .section-testimonials-header .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .partners-cta {
+        font-size: 1.5rem;
+        padding: 0 16px;
     }
 }

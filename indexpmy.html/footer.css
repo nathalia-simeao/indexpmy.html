@@ -36,6 +36,22 @@
     text-align: left;
 }
 
+.contact-line.tripadvisor-line {
+    text-align: left; 
+    display: block; 
+    margin-top: 20px; 
+    margin-left: -10px;
+    margin-right: 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.contact-line.tripadvisor-line:hover {
+    transform: scale(1.02);
+
+}
+
+
+
 .footer-column h4 {
     font-size: 1.1rem;
     font-weight: 700;

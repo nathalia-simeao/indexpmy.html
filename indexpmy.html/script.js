@@ -1,4 +1,3 @@
-
 // --- 1. LÓGICA DO MODO NOTURNO ---
 const inputCheck = document.querySelector('#modo-noturno');
 const elemento = document.querySelector('body');
@@ -10,6 +9,35 @@ if (inputCheck) {
     });
 }
 
+// --- 1.5. TROCAR ÍCONES NO MODO NOTURNO ---
+function updateIconsForTheme(theme) {
+    const socialIcons = document.querySelectorAll('.social-icon-img');
+    const contactIcons = document.querySelectorAll('.contact-icon');
+
+    socialIcons.forEach(icon => {
+        let src = icon.getAttribute('src');
+        if (theme === 'dark') {
+            // Troca de MC (light) para MN (dark)
+            src = src.replace('-MC.png', '-MN.png');
+        } else {
+            // Troca de MN (dark) para MC (light)
+            src = src.replace('-MN.png', '-MC.png');
+        }
+        icon.setAttribute('src', src);
+    });
+
+    contactIcons.forEach(icon => {
+        let src = icon.getAttribute('src');
+        if (theme === 'dark') {
+            // Troca de MC (light) para MN (dark)
+            src = src.replace('-MC.png', '-MN.png');
+        } else {
+            // Troca de MN (dark) para MC (light)
+            src = src.replace('-MN.png', '-MC.png');
+        }
+        icon.setAttribute('src', src);
+    });
+}
 
 // --- 2. LÓGICA DE FORMATAÇÃO DE MOEDA ---
 
@@ -92,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Carregar a preferência salva (ou usar 'light' como padrão)
     const savedTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-bs-theme', savedTheme);
+    updateIconsForTheme(savedTheme);
     
     // Se o tema salvo for 'dark', marcar o checkbox
     if (savedTheme === 'dark') {
@@ -103,10 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (this.checked) {
             // Ativa o Modo Noturno (dark)
             body.setAttribute('data-bs-theme', 'dark');
+            updateIconsForTheme('dark');
             localStorage.setItem('theme', 'dark');
         } else {
             // Ativa o Modo Claro (light)
             body.setAttribute('data-bs-theme', 'light');
+            updateIconsForTheme('light');
             localStorage.setItem('theme', 'light');
         }
     });
