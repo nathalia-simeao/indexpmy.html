@@ -10,6 +10,22 @@ if (inputCheck) {
 }
 
 // --- 1.5. TROCAR ÍCONES NO MODO NOTURNO ---
+function updateIconsForTheme(theme) {
+    const icons = document.querySelectorAll('.social-icon-img');
+    
+    icons.forEach(icon => {
+        const lightSrc = icon.getAttribute('data-icon-light');
+        const darkSrc = icon.getAttribute('data-icon-dark');
+
+        if (lightSrc && darkSrc) {
+            if (theme === 'dark') {
+                icon.src = darkSrc;
+            } else {
+                icon.src = lightSrc;
+            }
+        }
+    });
+}
 
 
 /**
@@ -97,5 +113,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-

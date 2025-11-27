@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/Logo - Portugal, Me & You - 400px.png" type="Portugal, Me and You">
+    <link rel="shortcut icon" href="assets/logopmy400px.png" type="Portugal, Me and You">
     <link rel="alternate" hreflang="pt" href="https://seusite.com.br/" />
     <link rel="alternate" hreflang="en" href="https://seusite.com/en/" />
     <link rel="alternate" hreflang="es" href="https://seusite.com/es/" />
@@ -21,16 +21,52 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./banner1.css">
-    <link rel="stylesheet" href="./cabeçalho.css">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./sectionguides.css">
-    <link rel="stylesheet" href="./sectionprodutos.css">
-    <link rel="stylesheet" href="./sectionprovasocial.css">
-    <link rel="stylesheet" href="./sectionverde.css">
-    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="banner1.css">
+    <link rel="stylesheet" href="cabeçalho.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="sectionguides.css">
+    <link rel="stylesheet" href="sectionprodutos.css">
+    <link rel="stylesheet" href="sectionprovasocial.css">
+    <link rel="stylesheet" href="sectionverde.css">
+    <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="./nossosguias.css">
+    <!-- Adicione este bloco <style> dentro da tag <head> do seu arquivo HTML -->
+    <style>
+        /* Estiliza o botão de troca de tema (modo claro e escuro) */
+        .form-switch .form-check-input {
+            background-color: #D3AF37;
+            border-color: #D3AF37;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+        }
+
+        .form-switch .form-check-input:focus {
+            border-color: #D3AF37;
+            box-shadow: 0 0 0 0.25rem rgba(211, 175, 55, 0.5);
+        }
+
+        /* Ajusta a largura do grid dos guias */
+        .guides-full-grid {
+            max-width: 1000px; /* Define uma largura máxima para o grid */
+            margin-left: auto;  /* Centraliza o grid */
+            margin-right: auto; /* Centraliza o grid */
+        }
+
+        /* Reduz o tamanho da fonte da descrição do guia */
+        .guide-description-page {
+            font-size: 0.9rem;
+        }
+
+        /* Reduz o tamanho da fonte da especialização do guia */
+        .guide-specialization {
+            font-size: 0.95rem;
+        }
+
+        /* Reduz o espaço abaixo do cabeçalho da página de guias */
+        .guides-header {
+            margin-bottom: 1rem; /* Ajuste o valor conforme necessário */
+        }
+    </style>
 
 </head>
 <body data-bs-theme="light">
@@ -39,8 +75,8 @@
         <div class="container"> 
             
             <div class="container__imagem">
-                <a class="container__imagem-menu" href="#">
-                    <img src="./assets/Logo - Portugal, Me & You - 200px.png" alt="Logo Portugal, Me and You">
+                <a class="container__imagem-menu" href="index.html">
+                    <img src="assets/logopmy200px.png" alt="Logo Portugal, Me and You">
                 </a>
             </div>
             
@@ -51,7 +87,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        <img src="./assets/Logo - Portugal, Me & You - 100px.png" alt="Logo Portugal, Me and You">
+                        <img src="assets/logopmy100px.png" alt="Logo Portugal, Me and You">
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -60,14 +96,14 @@
                     <ul class="navbar-nav container__navbar-link justify-content-end flex-grow-1 pe-3">
                         
                         <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="#contato">Contato</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="./index.html">Início</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="./produtos.html">Pacotes de Viagem</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="./nossosguias.html">Nossos Guias</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="indexpmy.html">Início</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="produtos.html">Pacotes de Viagem</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="nossosguias.html">Nossos Guias</a></li>
                      <li class="container__nav-item nav-item dark-mode-switch-item ms-5"> 
     <a class="nav-link" href="#">
         <div class="form-check form-switch d-flex align-items-center">
             
-            <img src="./assets/Sun Icon - MD.svg" 
+            <img src="assets/suniconmd.svg" 
                  alt="Ícone do Modo Claro (Sol)" 
                  class="sun-icon" 
                  width="20" 
@@ -75,7 +111,7 @@
             
             <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
             
-            <img src="./assets/moon icon - MD.svg" 
+            <img src="assets/mooniconmd.svg" 
                  alt="Ícone do Modo Escuro (Lua)" 
                  class="moon-icon" 
                  width="20" 
@@ -89,105 +125,73 @@
 </header>
 
     <main>
-    <section class="portugal-banner-1">
-    <div class="banner-1-overlay"></div> <div class="banner-1-content">
-        <h1 class="banner-1-title">Nossos Guias Especializados</h1>
-        <p class="banner-1-subtitle"><strong>Conheça os profissionais que tornam suas experiências inesquecíveis</strong></p>
-    </div>
+    <section class="guides-header">
+        <h1 class="guides-page-title">Nossos Guias Exclusivos</h1>
+        <p class="guides-page-intro">Cada guia é um especialista apaixonado, pronto para compartilhar o calor, a cultura e os detalhes que só os locais conhecem.</p>
     </section>
 
     <section class="guides-page-section">
         <div class="container-guides-page">
-            <h2 class="guides-page-title">Conheça Nossos Guias</h2>
-            <p class="guides-page-intro">Cada um de nossos guias traz uma perspectiva única e profundo conhecimento de Portugal. Especializados em diferentes áreas, eles criam experiências autênticas e memoráveis para cada visitante.</p>
 
             <div class="guides-full-grid">
                 
                 <div class="guide-full-card guide-susana">
-                    <div class="guide-image-container-page">
-                        <img src="./assets/Susana-png.jpg" alt="Foto da Guia Susana" class="guide-avatar-page">
-                        <div class="guide-social-section">
-                            <h5 class="guide-social-title">Siga a Susana nas redes sociais</h5>
-                            <div class="social-links-guia">
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Facebook - MC.png" alt="Facebook">
-                                </a>
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Instagram - MC.png" alt="Instagram">
-                                </a>
-                            </div>
+                    <img src="assets/susana.jpg" alt="Foto da Guia Susana" class="guide-avatar-page">
+                    <h3 class="guide-name-page">Susana</h3>
+                    <p class="guide-specialization">Especialista em História da Arte</p>
+                    <p class="guide-description-page">Susana possui mestrado em História da Arte, paixão por arquitetura e pintura, e uma infinita vontade e curiosidade de aprender. Um passeio com Susana é uma descoberta em si, onde os mínimos detalhes, esculturas e afrescos ganham vida como se estivéssemos lá, ao lado do artista, quando foram criados, muitos séculos atrás.</p>
+                    <div class="guide-social-section">
+                        <h5 class="guide-social-title">Siga a Susana nas redes sociais</h5>
+                        <div class="social-links-guia">
+                            <a href="#" target="_blank"><img src="assets/iconfacebookmc.png" alt="Facebook"></a>
+                            <a href="#" target="_blank"><img src="assets/iconinstagrammc.png" alt="Instagram"></a>
                         </div>
-                    </div>
-                    <div class="guide-info-container">
-                        <h3 class="guide-name-page">Susana</h3>
-                        <p class="guide-specialization">Especialista em História da Arte</p>
-                        <p class="guide-description-page">Susana possui mestrado em História da Arte, paixão por arquitetura e pintura, e uma infinita vontade e curiosidade de aprender. Um passeio com Susana é uma descoberta em si, onde os mínimos detalhes, esculturas e afrescos ganham vida como se estivéssemos lá, ao lado do artista, quando foram criados, muitos séculos atrás.</p>
+                        <a href="https://wa.me/351969261394" class="guide-whatsapp-btn" target="_blank">Contatar via WhatsApp</a>
                     </div>
                 </div>
 
                 <div class="guide-full-card guide-joao">
-                    <div class="guide-image-container-page">
-                        <img src="./assets/João-png.jpg" alt="Foto do Guia João" class="guide-avatar-page">
-                        <div class="guide-social-section">
-                            <h5 class="guide-social-title">Siga o João nas redes sociais</h5>
-                            <div class="social-links-guia">
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Facebook - MC.png" alt="Facebook">
-                                </a>
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Instagram - MC.png" alt="Instagram">
-                                </a>
-                            </div>
+                    <img src="assets/joao.jpg" alt="Foto do Guia João" class="guide-avatar-page">
+                    <h3 class="guide-name-page">João</h3>
+                    <p class="guide-specialization">Especialista em História Local e Cultura</p>
+                    <p class="guide-description-page">João adora livros e viajar. Com um jeito leve e acolhedor de conduzir os passeios, é especializado em fazer você se sentir em casa em menos de 48 horas de caminhada. Como lisboeta nato, ele consegue desvendar com maestria os segredos escondidos da capital e garantir uma experiência inesquecível em cada vista, em cada pessoa e em cada passeio.</p>
+                    <div class="guide-social-section">
+                        <h5 class="guide-social-title">Siga o João nas redes sociais</h5>
+                        <div class="social-links-guia">
+                            <a href="#" target="_blank"><img src="assets/iconfacebookmc.png" alt="Facebook"></a>
+                            <a href="#" target="_blank"><img src="assets/iconinstagrammc.png" alt="Instagram"></a>
                         </div>
-                    </div>
-                    <div class="guide-info-container">
-                        <h3 class="guide-name-page">João</h3>
-                        <p class="guide-specialization">Especialista em História Local e Cultura</p>
-                        <p class="guide-description-page">João adora livros e viajar. Com um jeito leve e acolhedor de conduzir os passeios, é especializado em fazer você se sentir em casa em menos de 48 horas de caminhada. Como lisboeta nato, ele consegue desvendar com maestria os segredos escondidos da capital e garantir uma experiência inesquecível em cada vista, em cada pessoa e em cada passeio.</p>
+                        <a href="https://wa.me/351969261394" class="guide-whatsapp-btn" target="_blank">Contatar via WhatsApp</a>
                     </div>
                 </div>
 
                 <div class="guide-full-card guide-laila">
-                    <div class="guide-image-container-page">
-                        <img src="./assets/Laila-png.jpg" alt="Foto da Guia Laila" class="guide-avatar-page">
-                        <div class="guide-social-section">
-                            <h5 class="guide-social-title">Siga a Laila nas redes sociais</h5>
-                            <div class="social-links-guia">
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Facebook - MC.png" alt="Facebook">
-                                </a>
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Instagram - MC.png" alt="Instagram">
-                                </a>
-                            </div>
+                    <img src="assets/laila.jpg" alt="Foto da Guia Laila" class="guide-avatar-page">
+                    <h3 class="guide-name-page">Laila</h3>
+                    <p class="guide-specialization">Especialista em Relações Internacionais e Turismo</p>
+                    <p class="guide-description-page">Laila possui mestrado em Relações Internacionais e quatro anos de experiência em turismo nacional e internacional. Seu amplo conhecimento em diversos assuntos enriquece sua capacidade de oferecer experiências de viagem enriquecedoras e memoráveis, dedicando-se a tornar cada viagem significativa e inesquecível, ajudando os viajantes a se conectarem com novas culturas e perspectivas.</p>
+                    <div class="guide-social-section">
+                        <h5 class="guide-social-title">Siga a Laila nas redes sociais</h5>
+                        <div class="social-links-guia">
+                            <a href="#" target="_blank"><img src="assets/iconfacebookmc.png" alt="Facebook"></a>
+                            <a href="#" target="_blank"><img src="assets/iconinstagrammc.png" alt="Instagram"></a>
                         </div>
-                    </div>
-                    <div class="guide-info-container">
-                        <h3 class="guide-name-page">Laila</h3>
-                        <p class="guide-specialization">Especialista em Relações Internacionais e Turismo</p>
-                        <p class="guide-description-page">Laila possui mestrado em Relações Internacionais e quatro anos de experiência em turismo nacional e internacional. Seu amplo conhecimento em diversos assuntos enriquece sua capacidade de oferecer experiências de viagem enriquecedoras e memoráveis, dedicando-se a tornar cada viagem significativa e inesquecível, ajudando os viajantes a se conectarem com novas culturas e perspectivas.</p>
+                        <a href="https://wa.me/351969261394" class="guide-whatsapp-btn" target="_blank">Contatar via WhatsApp</a>
                     </div>
                 </div>
 
                 <div class="guide-full-card guide-renan">
-                    <div class="guide-image-container-page">
-                        <img src="./assets/Renan-png.jpg" alt="Foto do Guia Renan" class="guide-avatar-page">
-                        <div class="guide-social-section">
-                            <h5 class="guide-social-title">Siga o Renan nas redes sociais</h5>
-                            <div class="social-links-guia">
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Facebook - MC.png" alt="Facebook">
-                                </a>
-                                <a href="#" target="_blank" class="social-link-guia">
-                                    <img src="./assets/Icon - Instagram - MC.png" alt="Instagram">
-                                </a>
-                            </div>
+                    <img src="assets/renan.jpg" alt="Foto do Guia Renan" class="guide-avatar-page">
+                    <h3 class="guide-name-page">Renan</h3>
+                    <p class="guide-specialization">Especialista em História dos Templários</p>
+                    <p class="guide-description-page">Renan é apaixonado por história e possui vasta experiência na área. Ele adora compartilhar sua paixão pela história dos Templários e tem uma habilidade natural para conectar pessoas, adicionando um toque de diversão a cada jornada. Seja quando um passeio ou planejando uma viagem, Renan traz um toque descontraído que faz com que explorar pareça fácil, divertido e prazeroso.</p>
+                    <div class="guide-social-section">
+                        <h5 class="guide-social-title">Siga o Renan nas redes sociais</h5>
+                        <div class="social-links-guia">
+                            <a href="#" target="_blank"><img src="assets/iconfacebookmc.png" alt="Facebook"></a>
+                            <a href="#" target="_blank"><img src="assets/iconinstagrammc.png" alt="Instagram"></a>
                         </div>
-                    </div>
-                    <div class="guide-info-container">
-                        <h3 class="guide-name-page">Renan</h3>
-                        <p class="guide-specialization">Especialista em História dos Templários</p>
-                        <p class="guide-description-page">Renan é apaixonado por história e possui vasta experiência na área. Ele adora compartilhar sua paixão pela história dos Templários e tem uma habilidade natural para conectar pessoas, adicionando um toque de diversão a cada jornada. Seja quando um passeio ou planejando uma viagem, Renan traz um toque descontraído que faz com que explorar pareça fácil, divertido e prazeroso.</p>
+                        <a href="https://wa.me/351969261394" class="guide-whatsapp-btn" target="_blank">Contatar via WhatsApp</a>
                     </div>
                 </div>
 
@@ -227,78 +231,95 @@
     </main>
 
 <footer class="main-footer">
-        
-        <div class="footer-top">
-            
-            <div class="footer-logo-container">
-                <img src="./assets/Logo - Portugal, Me & You - 200px.png" alt="Portugal, Me & You Logo" class="footer-logo">
-            </div>
+    <div class="footer-top">
+        <div class="footer-logo-container">
+            <img src="assets/logopmy200px.png" alt="Portugal, Me & You Logo" class="footer-logo">
+        </div>
 
-            <div class="footer-content-grid">
-                
-                <div class="footer-column footer-social">
-                    <h4>Siga a Portugal, Me & You</h4>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="social-link facebook">
-                            <img src="./assets/Icon - Facebook - MC.png" alt="Facebook" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link linkedin">
-                            <img src="./assets/Icon - Linkedin - MC.png" alt="LinkedIn" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link youtube">
-                            <img src="./assets/Icon - Youtube - MC.png" alt="YouTube" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link instagram">
-                            <img src="./assets/Icon - Instagram - MC.png" alt="Instagram" class="social-icon-img">
-                        </a>
-                    </div>
+        <div class="footer-content-grid">
+            <div class="footer-column footer-social">
+                <h4>Siga a Portugal, Me & You</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link facebook">
+                        <img src="assets/iconfacebookmc.png" alt="Facebook" class="social-icon-img" data-icon-light="assets/iconfacebookmc.png" data-icon-dark="assets/iconfacebookmn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link linkedin">
+                        <img src="assets/iconlinkedinmc.png" alt="LinkedIn" class="social-icon-img" data-icon-light="assets/iconlinkedinmc.png" data-icon-dark="assets/iconlinkedinmn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link youtube">
+                        <img src="assets/iconyoutubemc.png" alt="YouTube" class="social-icon-img" data-icon-light="assets/iconyoutubemc.png" data-icon-dark="assets/iconyoutubemn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link instagram">
+                    <img src="assets/iconinstagrammc.png" alt="Instagram" class="social-icon-img" 
+                    data-icon-light="assets/iconinstagrammc.png" 
+                    data-icon-dark="assets/iconinstagrammn.png">
+                    </a>
                 </div>
 
-                <div class="footer-column footer-contact" id="contato">
+                <div class="contact-line tripadvisor-line">
+                    <div id="TA_rated911" class="TA_rated">
+                        <ul id="1uXeWJ" class="TA_links y9C9UM">
+                            <li id="j6Z8MzP" class="6iyHSsdn">
+                                <a target="_blank" href="https://www.tripadvisor.com.br/Attraction_Review-g189158-d33249702-Reviews-Portugal_Me_and_You-Lisbon_Lisbon_District_Central_Portugal.html">
+                                    <img src="https://www.tripadvisor.com.br/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=911&amp;locationId=33249702&amp;lang=pt&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact" id="contato">
                 <h4>Contato</h4>
     
                 <div class="contact-line email-line">
-                    <img src="./assets/Icon - Email - MC.png" alt="Email" class="contact-icon">
-                    <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
+                <img src="assets/iconemailmc.png" alt="Email" class="contact-icon social-icon-img" 
+                data-icon-light="assets/iconemailmc.png" 
+                data-icon-dark="assets/iconemailmn.png">
+                <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
                 </div>
     
                 <div class="contact-line whatsapp-line">
-                    <img src="./assets/Icon - WhatsApp - MC.png" alt="WhatsApp" class="contact-icon">
-                    <p>
-                    <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
+                <img src="assets/iconwhatsappmc.png" alt="WhatsApp" class="contact-icon social-icon-img" 
+                data-icon-light="assets/iconwhatsappmc.png" 
+                data-icon-dark="assets/iconwhatsappmn.png">
+                <p>
+                <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
                     WhatsApp
-                    </a>
-                    </p>
+                </a>
+                </p>
                 </div>
-                </div>
+            </div>
 
-                <div class="footer-column footer-payments">
-                    <h4>Formas de Pagamento</h4>
-                    <div class="payment-icons-grid">
-                        <img src="./assets/Logo - visa.svg" alt="Visa">
-                        <img src="./assets/Logo - Mastercard.svg" alt="Mastercard">
-                        <img src="./assets/Logo - American Express.svg" alt="American Express">
-                        <img src="./assets/Logo - Paypal.svg" alt="PayPal">
-                        <img src="./assets/Logo - Shop.svg" alt="Shop Pay">
-                        <img src="./assets/Logo - MB Multibanco.svg" alt="Multibanco">
-                        <img src="./assets/Logo - google pay.svg" alt="Google Pay">
-                        <img src="./assets/Logo - Apple pay.svg" alt="Apple Pay">
-                        <img src="./assets/Logo - Maestro.svg" alt="Maestro">
-                        <img src="./assets/Logo - Unionpay.svg" alt="Unionpay">
-                    </div>
+            <div class="footer-column footer-payments">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons-grid">
+                    <img src="assets/lgvisa.svg" alt="Visa">
+                    <img src="assets/lgmastercard.svg" alt="Mastercard">
+                    <img src="assets/lgamericanexprexx.svg" alt="American Express">
+                    <img src="assets/lgpaypal.svg" alt="PayPal">
+                    <img src="assets/lgshop.svg" alt="Shop Pay">
+                    <img src="assets/lgmbmultibanco.svg" alt="Multibanco">
+                    <img src="assets/lggooglepay.svg" alt="Google Pay">
+                    <img src="assets/lgapplepay.svg" alt="Apple Pay">
+                    <img src="assets/lgmaestro.svg" alt="Maestro">
+                    <img src="assets/lgunionpay.svg" alt="Unionpay">
                 </div>
-                
-            </div> </div> <div class="footer-copyright-line">
-            Desenvolvido por Nathalia Simeão
-        </div>
-        
-        <div class="footer-bottom-bar"></div>
-        </footer>
+            </div>
+        </div> 
+    </div> 
+    <div class="footer-copyright-line">
+        Desenvolvido por Nathalia Simeão
+    </div>
+    
+    <div class="footer-bottom-bar"></div>
+</footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper-init.js"></script>

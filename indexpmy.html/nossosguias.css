@@ -1,188 +1,146 @@
-/* ---------------------------------------------------- */
-/* PÁGINA DEDICADA: NOSSOS GUIAS */
-/* ---------------------------------------------------- */
-
-.section-guias-page {
-    padding: 60px 20px;
-    padding-top: 300px;
-    background-color: var(--cor-primeira-background); /* Rosa/Bege */
+/* Estilos para o cabeçalho da página de guias */
+.guides-header {
+    padding: 275px 20px 20px; /* Ajustado o padding inferior */
     text-align: center;
+    background-color: var(--cor-primeira-background); /* Fundo rosa no modo claro */
+}
+.guides-page-section {
+    padding: 0;
+    text-align: center;
+    background-color: var(--cor-primeira-background); /* Fundo rosa no modo claro */
 }
 
-.section-guias-page .section-title,
-.section-guias-page .section-subtitle {
-    color: var(--cor-terceira-decoracao);
-    margin-bottom: 5px; 
+.guides-header .guides-page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cor-segunda-texto); /* Cor cinza no modo claro */
+    margin-bottom: 1rem;
 }
 
-.container-guia-page {
-    max-width: 1200px;
+.guides-header .guides-page-intro {
+    font-size: 1.2rem;
+    color: var(--cor-segunda-texto); /* Cor cinza no modo claro */
+    max-width: 800px;
     margin: 0 auto;
-    padding-top: 0;
+    line-height: 1.6;
 }
 
-.guide-list-grid {
+/* Grid principal dos cards */
+.guides-full-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas por linha */
+    gap: 30px; /* Espaçamento entre os cards */
+    margin-top: 0;
 }
 
-/* Card Completo (Vertical) */
+/* Estilo individual de cada card */
 .guide-full-card {
     background-color: #FFFFFF;
     border-radius: 10px 0 10px 0;
+    padding: 30px;
+    text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    padding-bottom: 30px;
-    transition: transform 0.3s ease;
-}
-
-.guide-full-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Foto e Container de Imagem */
-.guide-image-container-page {
-    width: 100%;
-    height: auto;
-    /* Layout vertical para a foto e redes sociais */
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 30px 0 0 0;
 }
 
+
+
+/* Imagem do guia */
 .guide-avatar-page {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Imagem redonda */
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-.guide-text-content-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 250px;
-    padding: 0 30px;
-    text-align: center;
+/* Nome do guia */
+.guide-name-page {
+    color: var(--cor-quinta-decoracao); /* Cor dourada */
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
-.guide-description {
-    flex-grow: 1;
-    text-align: justify;
-    margin-bottom: 20px;
+/* Especialização e Descrição */
+.guide-specialization,
+.guide-description-page {
+    color: var(--cor-segunda-texto); /* Cor de texto escura */
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* Redes Sociais (abaixo da foto) */
+.guide-specialization {
+    font-style: italic;
+    margin-bottom: 5px; /* Espaçamento reduzido */
+}
+
+/* Seção de redes sociais */
 .guide-social-section {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 10px;
-    border-top: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    margin-top: auto; /* Empurra para o final do card */
+    padding-top: 20px;
 }
 
 .guide-social-title {
-    font-size: 0.95rem;
-    color: var(--cor-terceira-decoracao);
-    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-segunda-texto);
     margin-bottom: 10px;
 }
 
-.social-links-guia {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
 .social-links-guia img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.2s;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
 
-.social-links-guia img:hover {
-    transform: scale(1.1);
-}
-
-
-/* Botão WhatsApp */
-.btn-whatsapp-guia {
-    display: block;
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: #FFFFFF;
-    padding: 15px 20px;
-    border-radius: 10px 0 10px 0;
+/* Botão do WhatsApp */
+.guide-whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
     margin-top: 20px;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0 !important;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border-radius: 10px 0 10px 0;
 }
 
-.btn-whatsapp-guia:hover {
-    background-color: #1EBE57;
-    transform: translateY(-2px);
+.guide-whatsapp-btn:hover {
+    background-color: #1EAB55;
+    color: white;
 }
 
-/* ---------------------------------------------------- */
-/* MODO NOTURNO: PÁGINA NOSSOS GUIAS */
-/* ---------------------------------------------------- */
-
-body[data-bs-theme="dark"] .section-guias-page {
-    background-color: #0000;
+/* Efeito de hover com zoom nos cards */
+.guide-full-card {
+    transition: transform 0.3s ease; /* Transição suave */
 }
 
-body[data-bs-theme="dark"] .section-title,
-body[data-bs-theme="dark"] .section-subtitle {
-    color: var(--cor-primeira-background);
+.guide-full-card:hover {
+    transform: scale(1.03); /* Aumenta o card em 3% */
 }
 
-body[data-bs-theme="dark"] .guide-full-card {
-    background-color: var(--cor-primeira-background);
-}
-
-
-/* ---------------------------------------------------- */
-/* RESPONSIVIDADE (Ajuste a grade para telas menores) */
-/* ---------------------------------------------------- */
-
-@media (max-width: 991.98px) {
-    .guide-list-grid {
-        grid-template-columns: repeat(1, 1fr); 
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .section-guias-page {
-    padding-top: 80px;
-    }
-
-    .guide-full-card {
-        max-width: 600px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .guides-full-grid {
+        grid-template-columns: 1fr; /* 1 coluna em telas menores */
+        padding: 0 15px; /* Adiciona um respiro nas laterais em telas menores */
     }
 }
 
-@media (max-width: 767.98px) {
-    .guide-list-grid {
-        grid-template-columns: 1fr; 
-    }
+/* --- MODO NOTURNO --- */
+[data-bs-theme="dark"] .guides-page-section {
+    background-color: #000000; /* Fundo preto no modo escuro */
+}
 
-    .section-guias-page {
-    padding-top: 80px;
-    }
+[data-bs-theme="dark"] .guides-header {
+    background-color: #000000; /* Fundo preto no modo escuro */
+}
+
+[data-bs-theme="dark"] .guides-header .guides-page-title,
+[data-bs-theme="dark"] .guides-header .guides-page-intro {
+    color: var(--cor-primeira-background); /* Cor rosa no modo escuro */
 }

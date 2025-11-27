@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logos-portugalme&you/Logo - Portugal, Me & You - 400px.png" type="Portugal, Me and You">
+    <link rel="shortcut icon" href="assets/logopmy400px.png" type="Portugal, Me and You">
     <link rel="alternate" hreflang="pt" href="https://seusite.com.br/" />
     <link rel="alternate" hreflang="en" href="https://seusite.com/en/" />
     <link rel="alternate" hreflang="es" href="https://seusite.com/es/" />
@@ -14,23 +14,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Portugal, Me and You</title>
+    <title>Nossos Guias - Portugal, Me and You</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
     rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/banner1.css">
-    <link rel="stylesheet" href="/css/cabeçalho.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/section-guides.css">
-    <link rel="stylesheet" href="/css/section-produtos.css">
-    <link rel="stylesheet" href="/css/section-provasocial.css">
-    <link rel="stylesheet" href="/css/section-verde.css">
-    <link rel="stylesheet" href="/css/form.css">
-</head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="banner1.css">
+    <link rel="stylesheet" href="cabeçalho.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="sectionguides.css">
+    <link rel="stylesheet" href="sectionprodutos.css">
+    <link rel="stylesheet" href="sectionprovasocial.css">
+    <link rel="stylesheet" href="sectionverde.css">
+    <link rel="stylesheet" href="form.css">
 
 <body data-bs-theme="light">
    <header>
@@ -38,8 +37,8 @@
         <div class="container"> 
             
             <div class="container__imagem">
-                <a class="container__imagem-menu" href="#">
-                    <img src="/assets/logos-portugalme&you/Logo - Portugal, Me & You - 200px.png" alt="Logo Portugal, Me and You">
+                <a class="container__imagem-menu" href="index.html">
+                    <img src="assets/logopmy200px.png" alt="Logo Portugal, Me and You">
                 </a>
             </div>
             
@@ -50,7 +49,7 @@
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        <img src="/assets/logos-portugalme&you/Logo - Portugal, Me & You - 100px.png" alt="Logo Portugal, Me and You">
+                        <img src="assets/logopmy100px.png" alt="Logo Portugal, Me and You">
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -59,14 +58,14 @@
                     <ul class="navbar-nav container__navbar-link justify-content-end flex-grow-1 pe-3">
                         
                         <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="#contato">Contato</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="/index.html">Início</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="../Produtos/produtos.html">Pacotes de Viagem</a></li>
-                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="../Nossos Guias/nossosguias.html">Nossos Guias</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="indexpmy.html">Início</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="produtos.html">Pacotes de Viagem</a></li>
+                        <li class="container__nav-item nav-item"><a class="container__menu-link nav-link" href="nossosguias.html">Nossos Guias</a></li>
                      <li class="container__nav-item nav-item dark-mode-switch-item ms-5"> 
     <a class="nav-link" href="#">
         <div class="form-check form-switch d-flex align-items-center">
             
-            <img src="/assets/icons-pmy/Sun Icon - MD.svg" 
+            <img src="assets/suniconmd.svg" 
                  alt="Ícone do Modo Claro (Sol)" 
                  class="sun-icon" 
                  width="20" 
@@ -74,7 +73,7 @@
             
             <input class="form-check-input" type="checkbox" role="switch" id="modo-noturno">
             
-            <img src="/assets/icons-pmy/moon icon - MD.svg" 
+            <img src="assets/mooniconmd.svg" 
                  alt="Ícone do Modo Escuro (Lua)" 
                  class="moon-icon" 
                  width="20" 
@@ -82,7 +81,8 @@
             
         </div>
     </a>
-</li>      
+</li>
+            
         </div> </nav>
 </header>
 
@@ -91,79 +91,97 @@
 
 
 </main>
-<footer class="main-footer">
-        
-        <div class="footer-top">
-            
-            <div class="footer-logo-container">
-                <img src="/assets/logos-portugalme&you/Logo - Portugal, Me & You - 200px.png" alt="Portugal, Me & You Logo" class="footer-logo">
-            </div>
 
-            <div class="footer-content-grid">
-                
-                <div class="footer-column footer-social">
-                    <h4>Siga a Portugal, Me & You</h4>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="social-link facebook">
-                            <img src="/assets/icons-pmy/Icon - Facebook - MC.png" alt="Facebook" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link linkedin">
-                            <img src="/assets/icons-pmy/Icon - Linkedin - MC.png" alt="LinkedIn" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link youtube">
-                            <img src="/assets/icons-pmy/Icon - Youtube - MC.png" alt="YouTube" class="social-icon-img">
-                        </a>
-                        <a href="#" target="_blank" class="social-link instagram">
-                            <img src="/assets/icons-pmy/Icon - Instagram - MC.png" alt="Instagram" class="social-icon-img">
-                        </a>
-                    </div>
+<footer class="main-footer">
+    <div class="footer-top">
+        <div class="footer-logo-container">
+            <img src="assets/logopmy200px.png" alt="Portugal, Me & You Logo" class="footer-logo">
+        </div>
+
+        <div class="footer-content-grid">
+            <div class="footer-column footer-social">
+                <h4>Siga a Portugal, Me & You</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link facebook">
+                        <img src="assets/iconfacebookmc.png" alt="Facebook" class="social-icon-img" data-icon-light="assets/iconfacebookmc.png" data-icon-dark="assets/iconfacebookmn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link linkedin">
+                        <img src="assets/iconlinkedinmc.png" alt="LinkedIn" class="social-icon-img" data-icon-light="assets/iconlinkedinmc.png" data-icon-dark="assets/iconlinkedinmn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link youtube">
+                        <img src="assets/iconyoutubemc.png" alt="YouTube" class="social-icon-img" data-icon-light="assets/iconyoutubemc.png" data-icon-dark="assets/iconyoutubemn.png">
+                    </a>
+                    <a href="#" target="_blank" class="social-link instagram">
+                    <img src="assets/iconinstagrammc.png" alt="Instagram" class="social-icon-img" 
+                    data-icon-light="assets/iconinstagrammc.png" 
+                    data-icon-dark="assets/iconinstagrammn.png">
+                    </a>
                 </div>
 
-                <div class="footer-column footer-contact" id="contato">
+                <div class="contact-line tripadvisor-line">
+                    <div id="TA_rated911" class="TA_rated">
+                        <ul id="1uXeWJ" class="TA_links y9C9UM">
+                            <li id="j6Z8MzP" class="6iyHSsdn">
+                                <a target="_blank" href="https://www.tripadvisor.com.br/Attraction_Review-g189158-d33249702-Reviews-Portugal_Me_and_You-Lisbon_Lisbon_District_Central_Portugal.html">
+                                    <img src="https://www.tripadvisor.com.br/img/cdsi/img2/badges/ollie-11424-2.gif" alt="TripAdvisor"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script async src="https://www.jscache.com/wejs?wtype=rated&amp;uniq=911&amp;locationId=33249702&amp;lang=pt&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact" id="contato">
                 <h4>Contato</h4>
     
                 <div class="contact-line email-line">
-                    <img src="assets/icons-pmy/Icon - Email - MC.png" alt="Email" class="contact-icon">
-                    <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
+                <img src="assets/iconemailmc.png" alt="Email" class="contact-icon social-icon-img" 
+                data-icon-light="assets/iconemailmc.png" 
+                data-icon-dark="assets/iconemailmn.png">
+                <p><a href="mailto:laila.abf.reis@gmail.com">laila.abf.reis@gmail.com</a></p>
                 </div>
     
                 <div class="contact-line whatsapp-line">
-                    <img src="assets/icons-pmy/Icon - WhatsApp - MC.png" alt="WhatsApp" class="contact-icon">
-                    <p>
-                    <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
+                <img src="assets/iconwhatsappmc.png" alt="WhatsApp" class="contact-icon social-icon-img" 
+                data-icon-light="assets/iconwhatsappmc.png" 
+                data-icon-dark="assets/iconwhatsappmn.png">
+                <p>
+                <a href="https://wa.me/351969261394" target="_blank" rel="noopener noreferrer">
                     WhatsApp
-                    </a>
-                    </p>
+                </a>
+                </p>
                 </div>
-                </div>
+            </div>
 
-                <div class="footer-column footer-payments">
-                    <h4>Formas de Pagamento</h4>
-                    <div class="payment-icons-grid">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - visa.svg" alt="Visa">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - Mastercard.svg" alt="Mastercard">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - American Express.svg" alt="American Express">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - Paypal.svg" alt="PayPal">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - Shop.svg" alt="Shop Pay">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - MB Multibanco.svg" alt="Multibanco">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - google pay.svg" alt="Google Pay">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - Apple pay.svg" alt="Apple Pay">
-                        <img src=./assets/logos-forma-de-pagamento/Logo - Maestro.svg" alt="Maestro">
-                        <img src="/assets/logos-forma-de-pagamento/Logo - Unionpay.svg" alt="Unionpay">
-                    </div>
+            <div class="footer-column footer-payments">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons-grid">
+                    <img src="assets/lgvisa.svg" alt="Visa">
+                    <img src="assets/lgmastercard.svg" alt="Mastercard">
+                    <img src="assets/lgamericanexprexx.svg" alt="American Express">
+                    <img src="assets/lgpaypal.svg" alt="PayPal">
+                    <img src="assets/lgshop.svg" alt="Shop Pay">
+                    <img src="assets/lgmbmultibanco.svg" alt="Multibanco">
+                    <img src="assets/lggooglepay.svg" alt="Google Pay">
+                    <img src="assets/lgapplepay.svg" alt="Apple Pay">
+                    <img src="assets/lgmaestro.svg" alt="Maestro">
+                    <img src="assets/lgunionpay.svg" alt="Unionpay">
                 </div>
-                
-            </div> </div> <div class="footer-copyright-line">
-            Desenvolvido por Nathalia Simeão
-        </div>
-        
-        <div class="footer-bottom-bar"></div>
-        </footer>
+            </div>
+        </div> 
+    </div> 
+    <div class="footer-copyright-line">
+        Desenvolvido por Nathalia Simeão
+    </div>
+    
+    <div class="footer-bottom-bar"></div>
+</footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper-init.js"></script>
