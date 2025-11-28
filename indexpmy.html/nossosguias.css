@@ -1,146 +1,108 @@
-/* Estilos para o cabeçalho da página de guias */
 .guides-header {
-    padding: 275px 20px 20px; /* Ajustado o padding inferior */
     text-align: center;
-    background-color: var(--cor-primeira-background); /* Fundo rosa no modo claro */
-}
-.guides-page-section {
-    padding: 0;
-    text-align: center;
-    background-color: var(--cor-primeira-background); /* Fundo rosa no modo claro */
+    padding: 320px 20px 40px;
 }
 
-.guides-header .guides-page-title {
-    font-size: 2.8rem;
+.guides-page-title {
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    color: var(--cor-segunda-texto); /* Cor cinza no modo claro */
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #D3AF37;
+    margin-bottom: 0.5rem;
 }
 
-.guides-header .guides-page-intro {
-    font-size: 1.2rem;
-    color: var(--cor-segunda-texto); /* Cor cinza no modo claro */
+.guides-page-intro {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.1rem;
+    color: var(--bs-body-color);
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.6;
 }
 
-/* Grid principal dos cards */
+.container-guides-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
 .guides-full-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas por linha */
-    gap: 30px; /* Espaçamento entre os cards */
-    margin-top: 0;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
-/* Estilo individual de cada card */
 .guide-full-card {
-    background-color: #FFFFFF;
-    border-radius: 10px 0 10px 0;
-    padding: 30px;
+    background-color: var(--bs-card-bg, #fff);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px; /* Aumenta a largura máxima do card */
+    transition: transform 0.3s ease;
 }
 
+.guide-full-card:hover {
+    transform: scale(1.05);
+}
 
-
-/* Imagem do guia */
-.guide-avatar-page {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Imagem redonda */
+.guide-avatar {
+    width: 200px; /* Tamanho da imagem */
+    height: 200px; /* Tamanho da imagem */
+    border-radius: 50%; /* Deixa a imagem redonda */
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-/* Nome do guia */
-.guide-name-page {
-    color: var(--cor-quinta-decoracao); /* Cor dourada */
-    font-size: 1.8rem;
+.guide-name {
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
+    font-size: 1.5rem;
+    color: #D3AF37;
     margin-bottom: 5px;
-}
-
-/* Especialização e Descrição */
-.guide-specialization,
-.guide-description-page {
-    color: var(--cor-segunda-texto); /* Cor de texto escura */
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 .guide-specialization {
     font-style: italic;
-    margin-bottom: 5px; /* Espaçamento reduzido */
+    color: var(--bs-secondary-color);
+    margin-bottom: 15px;
 }
 
-/* Seção de redes sociais */
-.guide-social-section {
-    margin-top: auto; /* Empurra para o final do card */
-    padding-top: 20px;
+.guide-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-.guide-social-title {
-    font-size: 0.9rem;
-    color: var(--cor-segunda-texto);
-    margin-bottom: 10px;
+.social-links-guia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.social-links-guia img {
+.social-links-guia .social-icon-img {
     width: 30px;
     height: 30px;
-    margin: 0 5px;
 }
 
-/* Botão do WhatsApp */
 .guide-whatsapp-btn {
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
+    display: inline-block;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #FFFFFF;
+    padding: 10px 30px;
+    border-radius: 10px 0 10px 0;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s;
-    border-radius: 10px 0 10px 0;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
 .guide-whatsapp-btn:hover {
-    background-color: #1EAB55;
-    color: white;
+    background-color: #1DA851; /* Um tom mais escuro para o hover */
 }
-
-/* Efeito de hover com zoom nos cards */
-.guide-full-card {
-    transition: transform 0.3s ease; /* Transição suave */
-}
-
-.guide-full-card:hover {
-    transform: scale(1.03); /* Aumenta o card em 3% */
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .guides-full-grid {
-        grid-template-columns: 1fr; /* 1 coluna em telas menores */
-        padding: 0 15px; /* Adiciona um respiro nas laterais em telas menores */
-    }
-}
-
-/* --- MODO NOTURNO --- */
-[data-bs-theme="dark"] .guides-page-section {
-    background-color: #000000; /* Fundo preto no modo escuro */
-}
-
-[data-bs-theme="dark"] .guides-header {
-    background-color: #000000; /* Fundo preto no modo escuro */
-}
-
-[data-bs-theme="dark"] .guides-header .guides-page-title,
-[data-bs-theme="dark"] .guides-header .guides-page-intro {
-    color: var(--cor-primeira-background); /* Cor rosa no modo escuro */
-}
+/* ... outros estilos ... */

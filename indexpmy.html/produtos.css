@@ -1,0 +1,249 @@
+Código CSS dos produtos
+
+/* ---------------------------------------------------- */
+/* ESTILOS GERAIS DA PÁGINA DE PASSEIOS */
+/* ---------------------------------------------------- */
+
+.tour-page-container {
+    /* Centraliza o conteúdo, semelhante a um container Bootstrap */
+    max-width: 1200px; /* Aumenta a largura do container geral */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tour-page-header {
+    /* Garante que o conteúdo comece abaixo do header fixo */
+    padding-top: 300px; 
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: var(--cor-primeira-background); /* Rosa/Bege claro */
+}
+
+.tour-page-title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--cor-terceira-decoracao); /* Seu verde */
+    margin-bottom: 10px;
+}
+
+.tour-page-subtitle {
+    font-size: 1.7rem;
+    color: #555555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tour-page-category-title {
+    font-size: 2rem;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* ---------------------------------------------------- */
+/* 2. LAYOUT DO CARD DE PRODUTO (IMAGEM | CONTEÚDO) */
+/* ---------------------------------------------------- */
+
+.product-item-row {
+    display: flex; /* CHAVE: Ativa o Flexbox para alinhar as colunas lado a lado */
+    background-color: #FFFFFF;
+    border-radius: 10px 0 10px 0; /* Garante o border-radius correto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 40px auto; /* Centraliza o card e adiciona margem inferior */
+    max-width: 1300px; /* Define a largura máxima do card, descolando das laterais */
+    overflow: hidden; /* Garante que tudo fique dentro do border-radius */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item-row:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-area {
+    /* CHAVE: A imagem ocupará uma porção menor da linha */
+    flex-basis: 35%; 
+    flex-shrink: 0; 
+    min-width: 200px; /* Garante que a imagem não encolha demais */
+    max-height: 700px; /* Limita a altura total da área das imagens */
+    /* NOVOS ESTILOS PARA EMPILHAR AS IMAGENS */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adiciona um pequeno espaço entre as imagens */
+    justify-content: center; /* Centraliza as imagens se houver espaço sobrando */
+    padding: 10px; /* Adiciona um respiro em volta das imagens */
+}
+
+.product-item-image {
+    width: 100%;
+    flex: 1; /* Faz com que as imagens dividam a altura disponível */
+    min-height: 0; /* Necessário para o flexbox funcionar corretamente com object-fit */
+    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+    display: block;
+    border-radius: 10px 0 10px 0; /* Arredondamento solicitado para cada imagem */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o zoom */
+}
+
+.product-item-image:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+.product-details-area {
+    /* CHAVE: Ocupa o restante do espaço */
+    flex-grow: 1; 
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: space-between; /* Empurra o botão para baixo, se necessário */
+}
+
+.product-item-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FF0000;
+    margin-bottom: 10px;
+}
+
+.product-item-description {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 0;
+    flex-grow: 1; /* Permite que a descrição empurre o botão para baixo */
+}
+
+/* ---------------------------------------------------- */
+/* 3. ESTILO DO BOTÃO DE COMPRA */
+/* ---------------------------------------------------- */
+
+.product-buy-btn {
+    display: inline-block;
+    background-color: var(--cor-terceira-decoracao); /* Seu verde */
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 10px 0 10px 0;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.product-buy-btn:hover {
+    background-color: #008000; 
+}
+
+/* ---------------------------------------------------- */
+/* ESTILIZAÇÃO DA LISTA DE DESTAQUES DENTRO DO CARD */
+/* ---------------------------------------------------- */
+
+.product-highlights {
+    margin-top: 15px;
+    margin-bottom: 25px; /* Espaço antes do botão de compra */
+    padding-left: 0;
+}
+
+.highlights-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-terceira-decoracao); /* Seu verde */
+    margin-bottom: 10px;
+}
+
+.highlights-list {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding-left: 0;
+    margin: 0;
+}
+
+.highlight-item {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #454545;
+    margin-bottom: 5px;
+    /* Adiciona um ícone ou marcador personalizado (ex: um check verde) */
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Criando um marcador de lista personalizado (pode ser um círculo ou um check) */
+.highlight-item::before {
+    content: "•"; /* Usa um ponto como marcador */
+    color: var(--cor-terceira-decoracao); /* Marcador na cor verde */
+    font-weight: 800;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ---------------------------------------------------- */
+/* 4. RESPONSIVIDADE: EMPILHAR EM TELAS PEQUENAS */
+/* ---------------------------------------------------- */
+
+@media (max-width: 767px) {
+    .tour-page-container {
+        padding: 0 20px; /* Aumenta o padding lateral para garantir o respiro */
+    }
+
+    .product-item-row {
+        /* CHAVE: Empilha a imagem e o conteúdo verticalmente */
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .product-image-area {
+        /* Permite que a imagem ocupe a largura total no mobile */
+        flex-basis: 100%; 
+        max-height: 250px; 
+    }
+
+    .product-details-area {
+        padding: 20px 15px;
+    }
+    
+    .product-item-name {
+        font-size: 1.4rem;
+    }
+
+    .product-buy-btn {
+        width: 100%; /* Botão ocupa a largura total no mobile */
+    }
+}
+
+/* ---------------------------------------------------- */
+/* 5. OCULTAR SETAS DO SWIPER NA GALERIA DE FOTOS */
+/* ---------------------------------------------------- */
+
+.tour-page-gallery-slider .swiper-button-next,
+.tour-page-gallery-slider .swiper-button-prev {
+    display: none;
+}
+
+/* ---------------------------------------------------- */
+/* 6. MODO NOTURNO (DARK MODE) */
+/* ---------------------------------------------------- */
+
+body[data-bs-theme="dark"] .tour-page-header {
+    background-color: #000000; /* Fundo preto para o cabeçalho da página de produtos */
+}
+
+body[data-bs-theme="dark"] .tour-page-title {
+    color: #F4DCDC; /* Título principal em branco */
+}
+
+body[data-bs-theme="dark"] .tour-page-subtitle {
+    color: #F4DCDC;/* Subtítulo principal em branco */
+}
+
+body[data-bs-theme="dark"] .tour-page-category-title {
+    color: #F4DCDC; /* Títulos de categoria (Passeios de um dia, Passeios a Pé) em branco */
+}
+
+/* Manter os cards com o fundo branco ou ajustá-los se necessário, mas o pedido é para não mexer */
+body[data-bs-theme="dark"] .product-item-row {
+    background-color: #FFFFFF; /* Mantém o fundo do card branco */
+}
+
+body[data-bs-theme="dark"] .tour-page-gallery-title {
+    color: #F4DCDC; /* Título da galeria de fotos em branco */
+}
