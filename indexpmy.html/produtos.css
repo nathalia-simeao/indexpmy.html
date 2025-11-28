@@ -211,12 +211,44 @@ Código CSS dos produtos
 }
 
 /* ---------------------------------------------------- */
-/* 5. OCULTAR SETAS DO SWIPER NA GALERIA DE FOTOS */
+/* 5. ESTILOS DA GALERIA DE FOTOS (SWIPER) */
 /* ---------------------------------------------------- */
 
-.tour-page-gallery-slider .swiper-button-next,
-.tour-page-gallery-slider .swiper-button-prev {
-    display: none;
+/* Seção que envolve a galeria */
+.tour-page-gallery-slider {
+    padding-bottom: 4rem; /* Adiciona espaço interno na parte de baixo da seção */
+}
+
+/* Estilo para o componente <swiper-container> */
+.tour-photos-slider {
+    height: 380px; /* Altura do carrossel (reduzida) */
+    border-radius: 10px 0 10px 0 !important; /* Borda arredondada solicitada */
+    overflow: hidden; /* Garante que as imagens respeitem a borda */
+    max-width: 800px; /* Define uma largura máxima para a galeria */
+    margin: 30px auto; /* Centraliza a galeria na página */
+}
+
+/* NOVO: Garante que o wrapper interno do Swiper também tenha o border-radius */
+.tour-photos-slider::part(wrapper) {
+    border-radius: 10px 0 10px 0;
+}
+
+/* Estilo da imagem dentro do slide */
+.gallery-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o slide sem distorcer */
+}
+
+/* Estilo da paginação (bolinhas) */
+.tour-photos-slider::part(pagination-bullet) {
+    background-color: var(--cor-terceira-decoracao); /* Verde */
+    opacity: 0.5;
+}
+
+.tour-page-gallery-slider .swiper-pagination-bullet-active {
+    opacity: 1;
 }
 
 /* ---------------------------------------------------- */
@@ -244,6 +276,24 @@ body[data-bs-theme="dark"] .product-item-row {
     background-color: #FFFFFF; /* Mantém o fundo do card branco */
 }
 
+/* NOVO: Estilo para o título da galeria de fotos */
+.tour-page-gallery-title {
+    font-size: 2rem; /* Tamanho da fonte ajustado */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 60px; /* Adiciona espaço acima do título */
+    margin-bottom: 40px; /* Adiciona espaço abaixo do título */
+    font-weight: 600;
+}
+
 body[data-bs-theme="dark"] .tour-page-gallery-title {
     color: #F4DCDC; /* Título da galeria de fotos em branco */
+}
+
+/* Ajuste da paginação no modo noturno */
+body[data-bs-theme="dark"] .tour-page-gallery-slider .swiper-pagination-bullet {
+    background-color: var(--cor-primeira-background); /* Rosa/Bege */
+}
+
+body[data-bs-theme="dark"] .gallery-slide {
+    background: #1c1c1c; /* Fundo do slide no modo escuro */
 }

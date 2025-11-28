@@ -335,20 +335,23 @@
         <div class="tour-page-container">
             <h2 class="tour-page-gallery-title">Momentos Inesquecíveis nos Nossos Tours</h2>
             
-            <div class="swiper-container tour-photos-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/img/galeria-tour-1.jpg" alt="Foto de um Passeio" class="gallery-slide-image">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/galeria-tour-2.jpg" alt="Foto de um Passeio" class="gallery-slide-image">
-                    </div>
-                    </div>
-                
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+            <swiper-container class="tour-photos-slider" pagination="true" pagination-dynamic-bullets="true" loop="true" autoplay-delay="3000" grab-cursor="true">
+                <swiper-slide>
+                    <img src="assets/cascais1.webp" alt="Foto de um Passeio" class="gallery-slide-image">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="assets/castelo5.webp" alt="Foto de um Passeio" class="gallery-slide-image">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="assets/cascaisvisita.webp" alt="Foto de um Passeio" class="gallery-slide-image">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="assets/mosteiro.webp" alt="Foto de um Passeio" class="gallery-slide-image">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="assets/mosteiro1.webp" alt="Foto de um Passeio" class="gallery-slide-image">
+                </swiper-slide>
+            </swiper-container>
         </div>
     </section>
     
@@ -444,8 +447,8 @@
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/swiper-init.js"></script>
+    
+    <!-- Script do Swiper Element -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>

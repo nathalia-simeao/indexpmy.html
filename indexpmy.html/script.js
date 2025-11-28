@@ -113,3 +113,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+//swiper galeria de fotos dos tours
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tourPhotosSlider = new Swiper('.tour-photos-slider', {
+        // Configurações do Swiper
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000, // Passa para o próximo slide a cada 3 segundos
+            disableOnInteraction: false, // Continua o autoplay mesmo depois de interação manual
+        },
+    });
+});
