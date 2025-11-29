@@ -233,12 +233,19 @@ Código CSS dos produtos
     border-radius: 10px 0 10px 0;
 }
 
-/* Estilo da imagem dentro do slide */
-.gallery-slide img {
+/* NOVO: Aplica o border-radius ao próprio slide para mascarar a imagem */
+.tour-photos-slider swiper-slide {
+    border-radius: 10px 0 10px 0;
+    overflow: hidden !important; /* Essencial para que o slide corte a imagem interna */
+    max-height: 400px;
+}
+
+/* Estilo da imagem dentro do slide (agora usando a classe correta) */
+.gallery-slide-image {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra o slide sem distorcer */
+    max-height: 400px; /* Altura máxima para a imagem */
+    object-fit: cover; /* Garante que a imagem preencha o slide sem distorcer */
 }
 
 /* Estilo da paginação (bolinhas) */
